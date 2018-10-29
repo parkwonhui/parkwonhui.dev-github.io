@@ -14,8 +14,8 @@
 ### int temp8 = 010; 의 결과는?
 - 결과는 8
 - 숫자 맨 앞에 숫자 0을 붙이는 것은 값이 8진수라는 뜻이다.
+
 ~~~
-sample example
 package kosta.basic;
 
 public class Hello {
@@ -44,7 +44,7 @@ public class Mission01 {
 		Scanner sc = new Scanner(System.in);		// 키보드 입력받는 객체가 생성된다
 		System.out.print("나이: ");
 		int age = sc.nextInt();			// 숫자 입력을 받는다
-		'''sc.nextLine();				// 이거 빼면 제대로 입력값을 받지 않는다
+		sc.nextLine();				// 이거 빼면 제대로 입력값을 받지 않는다
 		System.out.print("이름: ");
 		String name = sc.nextLine();			// 라인 한 줄 내용을 입력 받는다
 				
