@@ -1,3 +1,9 @@
+---
+layout: post
+title: java, Scanner 정리
+categories: [java]
+tags: [java]
+---
 ### Java가 Compile 할 때?
 - 소스코드를 save을 하면 Compile됨
 - Error를 일부러 내도 그 순간 Error창에는 아무 변화가 없지만 save 시 Error 메시지가 나타난다 
