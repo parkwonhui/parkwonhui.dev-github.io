@@ -18,9 +18,10 @@ tags: [java]
 - ' ' => char
 - " " => String ( 기본적인 자료형이 아니다. char로 문자열 사용하기 불편해서 사용 )
 - float value = 3.14; 하면 에러가 나서 3.14f처럼 형변환을 해야한다.
-그런데 short, long 변수에 정수값을 줄 땐 형변환 에러 안나는데 왜 float만 난다.
-아마 소수점끼리 형변환하면 소실되는 값이 있으니까 에러 내는 듯 하다.
-double에 정수 대입은 에러 안남.
+- 그런데 short, long 변수에 정수값을 줄 땐 형변환 에러 안나는데 왜 float만 난다.
+- 아마 소수점끼리 형변환하면 소실되는 값이 있으니까 에러 내는 듯 하다.
+- double에 정수 대입은 에러 안남
+
 ~~~
 double d = 3.14+1;
 
@@ -54,6 +55,7 @@ System.out.printf("평균:%.2f", avg);
 - 큰자료형 = 큰 자료형+작은 자료형(묵시적 형변환)
 - 큰자료형과 작은자료형을 더하면 큰 자료형이 된다.
 - 아래처럼 연산결과를 작은자료형으로 받으면 에러난다.
+
 ~~~
 int n1 = 10;
 double n2 = 3.14;
@@ -64,7 +66,8 @@ byte a = 1 + b1;
 ~~~
 
 ### casting String <=> 정수형, 실수형
-- 모든 정수는 String과 연산하면 String이 된다		
+- 모든 정수는 String과 연산하면 String이 된다
+
 ~~~
 String n3 = 10 + 5 + "0";
 System.out.println(n3);
@@ -87,6 +90,7 @@ System.out.println(n9);
 ### String 비교
 - String 값이 같은지 비교할 땐 == 연산자가 아닌 String.equals 함수 사용
 - == 연산자는 주소값이 같은지 비교
+
 ~~~
 String str1 = "abc";
 String str2 = "abc";
