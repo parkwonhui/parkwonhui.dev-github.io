@@ -3,6 +3,7 @@ layout: post
 title: java, Scanner 정리
 categories: [java]
 tags: [java]
+permalink: javascanner.html
 ---
 ### Java가 Compile 할 때?
 - 소스코드를 save을 하면 Compile됨
@@ -64,3 +65,24 @@ public class Mission01 {
 - nextInt()로 숫자값을 받은 다음 문자열을 받을 땐 반드시 nextLine() 문자열 받기 전에 추가한다
 - 숫자를 입력할 때 숫자 + enter. 이 때 enter로 인해 개행문자가 생기는데 만약 다음 라인에서 nextInt()함수로 숫자를 받으면 개행문자는 상관없지만
 - nextLine()으로 받으면 개행문자를 입력으로 받아버린다. 그래서 더이상 입력을 할 수 없게 된다.
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://parkwonhui.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
