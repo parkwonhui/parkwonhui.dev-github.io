@@ -3,7 +3,6 @@ layout: post
 title: java, Scanner 정리
 categories: [java]
 tags: [java]
-permalink: javascanner.html
 comments: true
 ---
 ### Java가 Compile 할 때?
