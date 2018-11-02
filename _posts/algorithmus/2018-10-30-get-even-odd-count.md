@@ -3,6 +3,7 @@ layout: post
 title: 정수값의 짝수,홀수 갯수 구하기
 categories: [algorithmus]
 tags: [algorithmus]
+comments: true
 ---
 
 ### 문제

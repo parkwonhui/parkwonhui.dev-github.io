@@ -4,6 +4,7 @@ title: java, Scanner 정리
 categories: [java]
 tags: [java]
 permalink: javascanner.html
+comments: true
 ---
 ### Java가 Compile 할 때?
 - 소스코드를 save을 하면 Compile됨

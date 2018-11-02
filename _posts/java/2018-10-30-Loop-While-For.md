@@ -3,6 +3,7 @@ layout: post
 title: Loop(While, For)
 categories: [java]
 tags: [java]
+comments: true
 ---
 ### 반복문
 

@@ -3,6 +3,7 @@ layout: post
 title: 자바 데이터 타입, 데이터 연산
 categories: [java]
 tags: [java]
+comments: true
 ---
 ### Java의 플랫폼 독립성
 - '플랫폼 독립성'은 특정 플랫폼에 의존적이지 않다는 것을 의미

@@ -3,6 +3,7 @@ layout: post
 title: pyramid draw
 categories: [algorithmus]
 tags: [algorithmus]
+comments: true
 ---
 ### 문제
 
