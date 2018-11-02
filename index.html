@@ -4,49 +4,25 @@
 
 layout: home
 ---
-
-<div>Hello~~~</div>
-{{ page.title }} 
 </ul>
 <!-- This loops through the paginated posts -->
-<p>안녕0</p>
 {% for post in paginator.posts %}
-<p>안녕</p>
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p>안녕2</p>
     <span class="date">{{ post.date }}</span>
-	<p>안녕3</p>
-
   <div class="content">
-  <p>안녕4</p>
-
     {{ post.content }}
-	<p>안녕5</p>
-
   </div>
 {% endfor %}
 
 <!-- Pagination links -->
 <div class="pagination">
-<p>안녕6</p>
-
   {% if paginator.previous_page %}
-  <p>안녕7</p>
-
     <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
   {% else %}
-    <p>안녕8</p>
-
 	<span class="previous">Previous</span>
   {% endif %}
-<p>안녕9</p>
-
   <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  <p>안녕10</p>
-
   {% if paginator.next_page %}
-  <p>안녕11</p>
-
     <a href="{{ paginator.next_page_path }}" class="next">Next</a>
   {% else %}
     <span class="next ">Next</span>
