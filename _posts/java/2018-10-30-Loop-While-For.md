@@ -1,3 +1,9 @@
+---
+layout: post
+title: Loop(While, For)
+categories: [java]
+tags: [java]
+---
 ### 반복문
 
 while
