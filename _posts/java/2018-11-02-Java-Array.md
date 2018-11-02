@@ -25,14 +25,14 @@ arr[2] = new int[8];
 ~~~
 
 - 선언, 생성, 초기화를 동시에 함
-- int arr3[][] = {{1,2},
-				  {3,4,5},
-				  {6,7,8,9}};
+~~~
+#int arr3[][] = {0번배열, 1번배열 3번배열} ;
+~~~
 
 ### 2차원 배열 순회
 
 ~~~
-int arr3[][] = {{1,2}, {3,4,5}, {6,7,8,9}};
+int arr3[][] = {array, array, array};
 for(int i = 0; i < arr3.length; ++i)
 {
     for(int j = 0; j < arr3[i].length; ++j)
