@@ -53,6 +53,8 @@ System.arraycopy(src, srcPos, dest, destPos, length);
 - destPos : 복사할 대상의 복사 시작 위치
 - length : 복사할 길이
 
+<div id="disqus_thread"></div>
+<script>
 
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
