@@ -8,9 +8,8 @@ comments: true
 ### 스레드 동기화, 원자성 이란
 Atomic Operation
 원자성이란 소스코드가 한번에 실행된다는 걸 보장해주는 것이다.<br>
-스레드끼리는 지역 변수(stack)를 제외한 code, heap, static 내용을 공유한다.<br>
+스레드끼리는 stack(지역변수, 매개변수..)을 제외한 code, heap, static 데이터를 공유한다.<br>
 그렇기 때문에 여러 쓰레드가 공용 변수(code, heap, static 데이터)에 접근해서 값을 바꾼다면<br>
-
 제대로 연산이 되지 않는 문제가 발생한다.<br>
 예를들어 다음 class 멤버 함수가 있다.(memberId는 class 멤버 변수이다)<br>
 
