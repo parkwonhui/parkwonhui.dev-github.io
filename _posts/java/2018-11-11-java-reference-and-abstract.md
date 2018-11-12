@@ -124,6 +124,7 @@ public class Work{
 
 - Work가 Role을 상속하고, Person이 Work 대신 Role가상클래스를 멤버변수로 가짐
 - Role을 상속하는 Driver class를 추가해도 Person 소스코드 수정이 필요없다
+
 ~~~
 public class Person{
      private String name;
