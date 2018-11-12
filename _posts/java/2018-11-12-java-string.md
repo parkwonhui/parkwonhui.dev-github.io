@@ -121,8 +121,8 @@ if(true == fileName1.endsWith("jpg")){
 }
 ~~~
 
-그 외  getBytes ( 네트워크로 전달할 때 바이트로 변환),
-toCharArray()(Char형으로 변환) 등의 String 함수가 있다
+그 외  getBytes ( 네트워크로 전달할 때 바이트로 변환),<br>
+toCharArray()(Char형으로 변환) 등의 String 함수가 있다<br>
 
 
 <div id="disqus_thread"></div>
