@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Regular(정규직)
+title: Regular(정규표현식)
 categories: [java]
 tags: [java,regular]
 comments: true
