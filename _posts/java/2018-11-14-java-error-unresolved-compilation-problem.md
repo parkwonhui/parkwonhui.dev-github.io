@@ -19,8 +19,8 @@ Exception in thread "main" java.lang.Error: Unresolved  compilation problem:
 어떤 소스코드를 내 프로젝트에 포함시키고 나서 빌드하니 에러가 났다<br>
 
 ### 해결
-package를 포함하지 않아서 난 에러였다<br>
-해당 package 포함 후 해결<br>
+소스코드에 현재 package를 추가하지 않아서 난 에러였다<br>
+소스코드에 package 키워드로 패키지를 포함하니 해결되었다<br>
 
 <div id="disqus_thread"></div>
 <script>
