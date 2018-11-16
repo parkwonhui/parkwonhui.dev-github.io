@@ -1,6 +1,6 @@
 ---
 layout: post
-title: static(스레드동기화,원자성)
+title: static
 categories: [java]
 tags: [java,static]
 comments: true
