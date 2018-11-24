@@ -1,14 +1,24 @@
+---
+layout: post
+title: kakao chatbot(카카오 챗봇)
+categories: [server]
+tags: [server,kakaochatbot]
+comments: true
+---
 ### Node.js란?
+
 - V8 Engine 사용(구글에서 개발)
 - 이벤트가 발생했을 때 동작하는 방식(자원 소모x)
 - non-blocking
 - 싱글 스레드
 
 ### 설치
+
 - https://nodejs.org/ko/
 - 명령 프롬프트 창을 열고 node -v 명령어를 친다. 버전이 잘 나온다면 성공
 
 ### nodejs 초기화
+
 - 새로운 폴더를 만들고 명령 프롬프트로 새로운 폴더로 이동
 - npm init 명령어
 - 이름, 설명, 버전 등의 정보를 작성한다 ( 전부 작성했다면 폴더에 package.json 파일이 생성되어 있다 )
@@ -17,6 +27,7 @@
 
 
 ### 카카오 플러스친구 관리자 가입
+
 - https://business.kakao.com/ 접속
 - 상단메뉴에서 카카오 플러스친구 를 선택해서 관리자 가입을 합니다
 - 새 플러스 친구를 선택해서 플러스 친구를 만듭니다
@@ -41,23 +52,28 @@ curl -XPOST 'https://:your_server_url/message' -d '{
 ~~~
 
 ### nodejs api 작업
+
 - 명령프롬프트 창에 npm install express --save 명령어를 친다. express 프레임워크를 설치한다
 - 서버 소스를 작성한다. 그리고 서버를 띄운다(명령어 node app.js)
 - localhost:포트번호/keyboard 으로 접속한다
 - 결과가 뜨는것을 확인할 수 있다 
 
 ### 공인 ip 설정
+
 - 포트포워딩 글을 참고한다( https://parkwonhui.github.io/server/2018/11/18/server-port-forwarding.html )
 
 ### 패킷 전달을 위한 모듈설치
+
 - npm install body-arser --save
 
 ### 패킷 전달 코드 추가
+
 - 아래 소스코드를 작성하고 http://외부 ip:포트번호/keyboard 로 접속되는지 확인한다
 - 접속 완료 시 API형-앱 url에 http://외부 ip:포트번호를 적는다 (keyboard는 안적어도 된다)
 - 응답이 잘 되면 성공한 것이고, 응답이 안되면 포트포워딩이나, url을 다시 확인한다
 
 ### 생각할 점
+
 - 내 컴퓨터에선 80번 포트밖에 되지 않았다.
 - port open 체크 사이트에서도 open 된 상황이었음( https://www.yougetsignal.com/tools/open-ports/ )
 
@@ -145,3 +161,29 @@ app.post('/message', function(req, res){
     res.json(send);
 });
 ~~~
+
+
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://parkwonhui.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+					
