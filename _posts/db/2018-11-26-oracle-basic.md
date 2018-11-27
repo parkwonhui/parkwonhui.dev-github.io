@@ -139,3 +139,13 @@ SELECT * FROM employees where commission_pct is not null
 ~~~
 SELECT department_id, avg(salary) from employees group by department_id
 ~~~
+
+### having절
+- group by로 나온 group 에 또 조건을 걸고 싶을 때 사용
+- 부서별 급여 평균이 5000 미만의 부서의 내역을 검색하라
+~~~
+select department_id, AVG(salary) 
+                from departments
+                group by departement_id
+                having avg(salary) < 5000 
+~~~
