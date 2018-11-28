@@ -15,9 +15,10 @@ comments: true
 ### 문자 함수
 |함수   |설명   |사용법| 결과 |
 |:---|:---:|:---:|:---:|
-| UPEER(문자열)    | 문자열을 모두 대문자로 변경| SELECT UPPER('AbcdEF') FROM DUAL; | ABCDEF |
-| LOWER(문자열)    | 문자열을 모두 소문자로 변경| SELECT LOWER('AbcdEF') FROM DUAL;| abcdef |
-| INITCAP(문자열)    | 첫글자를 대문자로. 나머지는 소문자로 변경|SELECT INITCAP('AbcdEF') FROM DUAL;|Abcdef|
+|UPEER(문자열)| 문자열을 모두 대문자로 변경|SELECT UPPER('AbcdEF') FROM DUAL; |ABCDEF|
+|LOWER(문자열)| 문자열을 모두 소문자로 변경|SELECT LOWER('AbcdEF') FROM DUAL;|abcdef|
+|INITCAP(문자열)| 첫글자를 대문자로. 나머지는 소문자로 변경|SELECT INITCAP('AbcdEF') FROM DUAL;|Abcdef|
+
 - 특정 단어를 찾으려고 하는데, 찾을 대상들이 형식이 다를 때('ABcd', 'aBcd') 일원화하여 쉽게 찾을 수 있다
  
 |함수   |설명   |사용법|결과 |
