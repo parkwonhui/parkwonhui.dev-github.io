@@ -15,14 +15,12 @@ AS SELECT * FROM ORI_TABLE;
 ~~~
 
 - 일부 복사
-
 ~~~
 CREATE TABLE NEW_TABLE
 AS SELECT 복사할 컬럼 FROM ORI_TABLE;
 ~~~
 
 - 테이블 구조만 복사
-
 ~~~
 CREATE TABLE NEW_TABLE
 AS SELECT * FROM WHERE 1=0;
@@ -40,46 +38,39 @@ CREATE TABLE NEW_TABLE(
 - 이미 생성된 데이터베이스 객체 수정
 - 테이블에 새 열을 추가, 삭제, 길이 변경 등의 일을 할 수 있음
 - 테이블에 열을 추가하는 ADD
-
 ~~~
 ALTER TABLE ITEMNAME ADD 컬럼이름 컬럼자료형;
 ~~~
 
 - 테이블의 열 이름 변경 RENAME
-
 ~~~
 ALTER TABLE 테이블NAME RENAME COLUMN 컬럼명 TO 바꿀 컬럼명
 ~~~
 
 - 열의 자료형 변경 MODIFY
 - DESC TABLE_NAME 으로 데이터형이 수정되었는지 확인할 수 있다
-
 ~~~
 ALTER TABLE 테이블NAME MODIFY 컬럼명 수정데이터형
 ~~~
 
 - 열을 삭제하는 DROP
-
 ~~~
 ALTER TABLE NAME DROP COLUMN 컬럼명
 ~~~
 
 - 테이블 이름을 변경하는 RENAME
-
 ~~~
 RENAME TABLE_NAME TO 바꿀 TABLE_NAME
 ~~~
 
 - 테이블의 데이터를 삭제하는 TRUNCATE
 - TRUNCATE로 삭제한 테이블은 복구할 수 없다
-
 ~~~
 TRUNCATE TABLE TABLE_NANE
 ~~~
 
 - 테이블의 데이터를 삭제하는 DROP
 - DROP으로 삭제한 테이블은 복구할 수 있다
-
 ~~~
 DROP TABLE TABLENAME;
 ~~~
