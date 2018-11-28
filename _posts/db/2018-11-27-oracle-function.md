@@ -11,6 +11,7 @@ comments: true
 | CEIL(숫자) | 지정한 숫자에서 큰 정수를 반환 | SELECT CEIL(3.14) FROM DUAL; | 4 |
 | FLOOR(숫자) | 지정한 숫자에서 작은 정수를 반환| SELECT FLOOR(3.14) FROM DUAL;| 3 |
 
+
 |함수   |설명   |사용법| 결과 |
 |:---|:---:|:---:|:---:|
 | CEIL(숫자) | 지정한 숫자에서 큰 정수를 반환 | SELECT CEIL(3.14) FROM DUAL; | 4 |
