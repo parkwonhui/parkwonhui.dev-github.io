@@ -18,6 +18,38 @@ comments: true
 |  CHECK | 열에 저장할 수 있는 값의 범위, 패턴을 정의할 수 있음 |
 |  DEFAULT | 특정 열에 저장할 값이 지정되지 않았을 경우에 기본값을 지정 |
 
+### 컬럼 레벨 제약 조건
+- 컬럼을 생성할 때 데이터 타입 옆에 제약조건을 적는다
+
+~~~~
+CREATE TABLE NAME(
+ID VARCHAR(20) NOT NULL
+);
+~~~~
+
+### 테이블 레벨 방식
+- 테이블 칼럼 을 전부 선언 후 제약조건을 나중에 선언하는 것
+~~~
+CREATE TABLE NAME(
+PLAYER_ID VARCHAR(20) NOT NULL
+
+CONSTRAINT 제약조건 이름 FOREIGN KEY(컬럼명)
+                        REFERENCES 테이블(컬럼명)
+);
+~~~
+
+### 테이블 수정 방식
+- 테이블을 생성한 후 제약조건을 ALTER 수정하듯이 추가하는 것
+
+~~~
+CREATE TABLE NAME(
+ID NUMBER,
+PASS NUMBER
+);
+
+ALTER TABLE 테이블이름 CONSTRAINT 제약조건 이름 PRIMARY KEY(컬럼 이름)
+~~~
+
 
 <div id="disqus_thread"></div>
 <script>
