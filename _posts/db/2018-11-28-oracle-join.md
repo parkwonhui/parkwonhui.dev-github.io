@@ -49,6 +49,7 @@ ON 조건
 ### SEFE JOIN
 - 자기 자신의 테이블과 합치는 것
 - 찾고자 하는 값이 자신의 테이블에 있을 때 사용
+
 ~~~
 SELECT a.칼럼명, b.칼럼명 ...
 FROM 테이블1 A JOIN 테이블1 B
@@ -70,6 +71,7 @@ WHERE A.칼럼 = B.칼럼(+)
 - OUTTER JOIN ANSI JOIN
 - 전체 데이터를 보고 싶은 쪽을 JOIN에 지정
 - 왼쪽 테이블의 데이터를 전체 출력하고 싶다면 LEFT JOIN, 오른쪽일 경우 RIGHT JOIN
+
 ~~~
 SELECT TABLE1 A, TABLE2 B
 FROM TABLE1 A LEFT JOIN TABLE2 B
