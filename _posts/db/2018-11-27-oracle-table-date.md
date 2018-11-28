@@ -76,7 +76,7 @@ DROP TABLE TABLENAME;
 ~~~
 
 ### 테이블 데이터 처리
-테이블에 데이터 추가 시 INSERT문 사용
+- 테이블에 데이터 추가 시 INSERT문 사용
 ~~~
 INSERT INTO ITEM VALUES(VALUE,  VALUE); // 순서대로 값이 들어갈 때
 INSERT INTO NEW_ITEM(NEW_COUNT, NEW_INDEX)  VALUES(VALUE, VALUE); // 순서를 지정하고 싶을 때
