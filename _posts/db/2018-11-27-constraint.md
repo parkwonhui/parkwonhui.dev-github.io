@@ -29,6 +29,7 @@ ID VARCHAR(20) NOT NULL
 
 ### 테이블 레벨 방식
 - 테이블 칼럼 을 전부 선언 후 제약조건을 나중에 선언하는 것
+
 ~~~
 CREATE TABLE NAME(
 PLAYER_ID VARCHAR(20) NOT NULL
