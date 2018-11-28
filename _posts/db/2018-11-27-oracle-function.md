@@ -37,7 +37,7 @@ comments: true
 
 ### NULL 처리 함수
 |함수   |설명   |
-|:---|:---:|:---:|:---:|
+|:---|:---:|
 | NVL(NULL검사 데이터 OR 열, NULL 대체 문자) | NULL일 경우 대체문자로 변경한다 |
 
 <div id="disqus_thread"></div>
