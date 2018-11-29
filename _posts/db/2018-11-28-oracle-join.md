@@ -78,6 +78,17 @@ FROM TABLE1 A LEFT JOIN TABLE2 B
 ON A.컬럼 = B.컬럼
 ~~~
 
+### SUB QUERY
+- 예를들어 '평균 연봉보다 많은 사람만 출력하시오'란 예제가 있다면 먼저 평균연봉을 구해야한다
+- 이 때 평균연봉을 구한 후 결과를 복사해서 비교하면 2번 실행해야하므로 비효율적이다
+- SUB QUERY를 사용해서 결과값을 구한 후 메인쿼리에서 사용할 수 있다
+- 서브쿼리를 먼저 작성 후 메인쿼리를 작성한다
+
+~~~
+SELECT TABLE1 칼럼
+FROM TABLE1
+WHERE 연봉 > (SELECT AVG(연봉) FROM TABLE1)
+~~~
 
 <div id="disqus_thread"></div>
 <script>
