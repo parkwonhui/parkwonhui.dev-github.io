@@ -56,9 +56,9 @@ FROM 테이블1 A JOIN 테이블1 B
 ON A.컬럼 = B.다른컬럼 
 ~~~
 
-### OUTTER JOIN
+### OUTER JOIN
 - INNER JOIN 사용시 테이블 데이터가 매칭되지 않은 정보는 볼 수 없음
-- 데이터가 매칭 되지 않더라도 한쪽의 테이블을 전부 보고 싶을 때 OUTTER JOIN을 사용함
+- 데이터가 매칭 되지 않더라도 한쪽의 테이블을 전부 보고 싶을 때 OUTER JOIN을 사용함
 - 매칭되는 데이터가 없을 때 NULL이 표시
 - +표시는 전체를 보고 싶은쪽 반대편에 붙이도록 함
 
@@ -68,7 +68,7 @@ FROM TALBLE1 A, TABLE2 B
 WHERE A.칼럼 = B.칼럼(+)
 ~~~
 
-- OUTTER JOIN ANSI JOIN
+- OUTER JOIN ANSI JOIN
 - 전체 데이터를 보고 싶은 쪽을 JOIN에 지정
 - 왼쪽 테이블의 데이터를 전체 출력하고 싶다면 LEFT JOIN, 오른쪽일 경우 RIGHT JOIN
 
