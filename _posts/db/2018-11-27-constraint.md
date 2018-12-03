@@ -48,7 +48,7 @@ ID NUMBER,
 PASS NUMBER
 );
 
-ALTER TABLE 테이블이름 CONSTRAINT 제약조건 이름 PRIMARY KEY(컬럼 이름)
+ALTER TABLE 테이블이름 ADD CONSTRAINT 제약조건 이름 PRIMARY KEY(컬럼 이름)
 ~~~
 
 
