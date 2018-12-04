@@ -2,7 +2,7 @@
 layout: post
 title: Oracle 다중쿼리(Multiple row query)
 categories: [db]
-tags: [db,oracle,basic,view,index]
+tags: [db,oracle,basic,query]
 comments: true
 ---
 ### 다중쿼리
