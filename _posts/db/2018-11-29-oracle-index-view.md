@@ -57,7 +57,7 @@ START WITH 1                -- 어떤 숫자부터 값을 매길 것인지
 INCREMENT BY 10;         -- 다음 숫자는 얼마만큼 커질 것인지
 
 INSERT IINTO departments                --  시퀀스 사용
-VALUES(department_id_seq.NEXT , 'IT Education', 103, 1400);
+VALUES(department_id_seq.NEXTVAL , 'IT Education', 103, 1400);
 
 DROP SEQUENCE SEQUENCE_NAME   -- 시퀀스 삭제
 ~~~
