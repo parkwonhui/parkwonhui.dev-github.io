@@ -8,6 +8,7 @@ comments: true
 ### 반복문
 - 자바의 WHILE, FOR문처럼 사용할 수 있다
 - LOOP, WHILE, FOR 예제
+
 ~~~
 DECLARE
 i NUMBER := 0;
@@ -76,6 +77,7 @@ END LOOP;
 ~~~
 
 - 사용 예제
+
 ~~~
 DECLARE
 -- 명시적 커서 선언
