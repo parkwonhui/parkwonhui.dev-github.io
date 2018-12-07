@@ -70,6 +70,7 @@ END;
 ~~~
 
 - FOR LOOP를 사용하면 OPEN, FETCH를 사용하지 않아도 된다
+
 ~~~
 FOR 루프 인덱스 이름 IN 커서 이름 LOOP
 결과 행별로 반복 수행할 작업;
@@ -123,6 +124,7 @@ END;
 - 메모리, 성능, 재사용성 등 장점이 있다
 - 실행은 EXEC 저장 서브프로그램 이름(인자);
 - RETURN 값이면 인자에 OUT, 전달 인자면 IN으로 명시
+
 ~~~
 CREATE [OR REPLACE] PROCEDURE 프로시저 이름
 IS | AS
