@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Eclipse Web 환경세팅
-categories: [db]
+categories: [front]
 tags: [db,html,basic]
 comments: true
 ---

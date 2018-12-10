@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTML 기초 정리
-categories: [db]
+categories: [front]
 tags: [db,html,basic]
 comments: true
 ---

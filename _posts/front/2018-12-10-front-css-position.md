@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS position
-categories: [html]
+categories: [front]
 tags: [db,html,basic,css]
 comments: true
 ---

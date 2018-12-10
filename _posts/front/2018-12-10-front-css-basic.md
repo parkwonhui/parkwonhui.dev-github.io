@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTML5,CSS 선택자
-categories: [html]
+categories: [front]
 tags: [db,html,basic,css]
 comments: true
 ---
