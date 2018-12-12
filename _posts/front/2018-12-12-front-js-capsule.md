@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JavaScript 객체,생성자
+title: JavaScript 캡슐화
 categories: [front]
 tags: [basic,js,javascript]
 comments: true
@@ -30,8 +30,13 @@ alert(st.stname);
 function Student(n){
        var stname;
        
-       this.getstName = function(){return this.name;}
-       this.setstName = function(n){    this.name = n;};    
+	   // getstName, setstName함수에서
+	   // this.stname를 쓰면 stname을 찾을 수 없다
+	   // 왜냐하면 생성자는 객체가 아니기 때문에
+	   // this.stname을하면 window의 멤버변수(전역변수) stname을 찾는 것이다
+	   // 결론 : stname은 생성자의 지역변수이므로 this를 뺀다
+       this.getstName = function(){return name;}
+       this.setstName = function(n){    name = n;};    
 }
 var st = new Student("강하나");
 alert(Student.getstName());
