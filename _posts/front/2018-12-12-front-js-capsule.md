@@ -24,6 +24,7 @@ alert(st.stname);
 ~~~
 
 - 캡슐화 후
+
 ~~~
 // 생성자 함수
 function Student(n){
