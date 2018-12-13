@@ -72,6 +72,10 @@ function helloResult(){
 
 ### Ajax자동완성 예제
 - suggestclient.html
+- encodeURIComponent : 한글은 깨질 위험이 있다 그러므로 인코딩해줘야 한다. 기본은 utf-8 인코딩
+- 한글 => D%95%98%EC 이런식으로 바뀐다
+- 패킷은 한번에 올 수도 있지만 나눠서 올 수도 있다. httpRequest.readyState가 4라면 패킷을 모두 받은 것이다
+- httpRequest.status가 200이라면 패킷에 에러가 없이 성공적으로 받았다는 뜻이다
 
 ~~~
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
