@@ -172,6 +172,23 @@ window.onload = prepareGallery;
 ~~~
 
 
+### 레벨로 객체찾기
+- nodeType1은 엘레먼트, nodeType2는 속성, nodeType3은 textnode이다
+- nodeType이 3이라면 innerHTML처럼 text를 가르키는 것이다
+- innerHTML은 표준이 아니므로 nodeType을 체크해서 text을 바꾸도록 한다
+
+~~~
+window.onload = function(){
+       var id1 = document.getElementById('id1');
+       var id2 = document.getElementById('id2');
+       if(id1.firstChild.nodeType == 3)
+             id1.firstChild.nodeValue = '안녕';
+       if(id2.firstChild.nodeType == 3)
+             id2.firstChild.nodeValue = '세상';
+}
+~~~
+
+
 <div id="disqus_thread"></div>
 <script>
 
