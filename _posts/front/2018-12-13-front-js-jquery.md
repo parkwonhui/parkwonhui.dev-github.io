@@ -10,10 +10,13 @@ comments: true
 - 소스의 단순화, 다양한 플러그인, 타 프레임웍보다 빠름
 - 웹표준을 지킴(따로 구버전,신버전 처리 따로 안해도 됨)
 - https://developers.google.com/speed/libraries/#jquery
+- 제일 간단하게 사용하는 법 : script에 jquery 사용 선언
+- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 ### 선택자
 - 기본세렉터
 - $() : 팩토리함수. jquery 객체를 생성할 때 사용
+- 자식태그는 부모 태그 바로 아래에 있는 태그. 자손태그는 부모 태그 바로 아래모든 태그
 
 Selector|설명
 -------|-------
@@ -90,6 +93,70 @@ $('tr').filter(':odd').addClass('alt');
 
 ~~~
 $('td:contains(Henry)').addClass('highlight');
+~~~
+- ajax 예제 jquery로 수정
+
+~~~
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="httpRequest.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+       
+       function startSuggest(){
+             var keyword = $('[name="keyword"]').val();          // name이  keyword인 태그의 값을 가져오기
+             var params = "keyword=" + encodeURIComponent(keyword);
+             sendRequest("suggest.jsp", params, displayResult, "POST");
+       }
+       
+       function displayResult(){
+             if(httpRequest.readyState == 4){
+                    if(httpRequest.status == 200){
+                          var html="";
+                          var result = httpRequest.responseText;
+                          var keywardList = result.split(',');
+                          for(var i=0;i<keywardList.length;i++){
+                                 var str = keywardList[i].trim();
+                                 html += "<a href=javascript:select('"  + str  + "')>" + str + "</a>
+";
+                          }
+                          
+                          $('#suggestList').html(html);
+                          show('suggest');
+                    }
+             }
+       }
+       
+       function show(elementId){
+             $('#'+elementId).css('display', '');
+       }
+       
+       function select(selectKeyward){
+             $('[name="keyword"]').val(selectKeyward);
+             hide('suggest');
+       }
+       
+       
+       function hide(elementId){
+             $('#'+elementId).css('display', '');
+       }
+       
+</script>
+</head>
+<body>
+       <form name="search" onkeyup="startSuggest()">
+             <input type="text" name="keyword">
+             <input type="button" value="전송">
+       </form>
+       
+       <div id="suggest" style="position: absolute; left: 10px">
+             <div id="suggestList"></div>
+       </div>
+</body>
+</html>
 ~~~
 
 
