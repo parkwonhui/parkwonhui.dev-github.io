@@ -184,6 +184,7 @@ var header_func = function headerfunc(e){
 ### 표준 이벤트 모델
 - 구형 웹브라우저에서는 이벤트 리스너가 동작하지 않는다
 - 어느 웹브라우저라도 동일한 동작을 하게 만들어줘야 한다
+- 최신 웹브라우저는 그냥 event를 사용하고 구형 웹브라우저는 window.event를 사용한다
 
 ~~~
 <!DOCTYPE html>
