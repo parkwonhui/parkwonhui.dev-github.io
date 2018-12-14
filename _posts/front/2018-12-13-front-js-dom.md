@@ -15,6 +15,7 @@ comments: true
 - open(URL, 이 인터넷창의 이름(통신할 때 필요), 윈도우 옵션) 
 - open : 새로운 window 객체를 생성. 새로운 인터넷 브라우저 창이 열린다
 - exam.html
+
 ~~~
 <!DOCTYPE html>
 <html>
