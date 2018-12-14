@@ -21,7 +21,6 @@ comments: true
 
 Selector|설명
 -------|-------
-*|모든 엘리먼트
 E|태그명이 E인 모든 엘리먼트
 E F|E의 자손이면서 태그명이 F인 모든 엘리먼트
 E>F|E의 바로 아래 자식이면서 바로 다음에 나오는 엘리먼트
@@ -45,7 +44,7 @@ Selector|설명
 :first-child|첫번째 자식 엘리먼트
 :last-child|마지막 자식 엘리먼트
 :nth-child(n)|n번째 자식 엘리먼트
-:nth-child(even|odd) | 짝수 또는 홀수 자식 엘리먼트
+:nth-child(even or odd) | 짝수 또는 홀수 자식 엘리먼트
 :even | 짝수 엘리먼트
 :odd | 홀수 엘리먼트
 
