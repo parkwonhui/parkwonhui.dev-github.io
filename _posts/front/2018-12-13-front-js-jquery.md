@@ -12,6 +12,7 @@ comments: true
 - https://developers.google.com/speed/libraries/#jquery
 - 제일 간단하게 사용하는 법 : script에 jquery 사용 선언
 - <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+- $function(){} : onload 와 같다. 리소스 로드 전 호출
 
 ### 선택자
 - 기본세렉터
