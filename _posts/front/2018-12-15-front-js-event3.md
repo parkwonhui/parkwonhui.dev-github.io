@@ -137,7 +137,7 @@ comments: true
 - 기본 이벤트를 제거한다
 - stopPropagation
 - 이벤트 전달 막기
-- <h1>안에 <a> 태그가 있어서  a 태그 실행 시 이벤트 버블링이 일어난다
+- < h1 >안에 < a > 태그가 있어서  a 태그 실행 시 이벤트 버블링이 일어난다
 - 이벤트 버블링을 끄려면 함수가 끝나기 전에 stopPropagation()을 호출하면 된다
 - stopPropagation() 함수 호출 대신 return false를 해도 이벤트 전달이 일어나지 않는다
 
