@@ -11,7 +11,10 @@ comments: true
 - 웹표준을 지킴(따로 구버전,신버전 처리 따로 안해도 됨)
 - https://developers.google.com/speed/libraries/#jquery
 - 제일 간단하게 사용하는 법 : script에 jquery 사용 선언
-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+~~~
+< script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+~~~
 - $function(){} : onload 와 같다. 리소스 로드 전 호출
 
 ### 선택자
@@ -24,10 +27,10 @@ Selector|설명
 -------|-------
 E|태그명이 E인 모든 엘리먼트
 E F|E의 자손이면서 태그명이 F인 모든 엘리먼트
-E>F|E의 바로 아래 자식이면서 바로 다음에 나오는 엘리먼트
-E+F|E의 형제 엘리먼트로 바로 다음에 나오는 엘리먼트F
-E~F|E의 형제 엘리먼트로 다음에 나오는 모든 엘리먼트 F
-E.C 태그명이 E인 모든 엘리먼트 중 클래스명이 C인 엘리먼트
+E > F|E의 바로 아래 자식이면서 바로 다음에 나오는 엘리먼트
+E + F|E의 형제 엘리먼트로 바로 다음에 나오는 엘리먼트F
+E ~ F|E의 형제 엘리먼트로 다음에 나오는 모든 엘리먼트 F
+E . C 태그명이 E인 모든 엘리먼트 중 클래스명이 C인 엘리먼트
 
 Selector|설명
 -------|-------
