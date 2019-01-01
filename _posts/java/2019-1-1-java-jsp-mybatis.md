@@ -33,8 +33,11 @@ comments: true
 
 
 ### MyBatis 라이브러리 추가
+- [myBatis download url](https://github.com/mybatis/mybatis-3/releases)
 - mybatis-3.2.6.jar tomcat lib 폴더에 추가(프로젝트 폴더서 추가되었는지 확인할 것)
-
+- jdbc lib 위치 : C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib
+- oracle에 있는 jdbc lib를 tomcat lib 폴더에 넣는다
+- 'mybatis-config.xml' 파일을 src 폴더 밑에 놓는다
 
 <div id="disqus_thread"></div>
 <script>
