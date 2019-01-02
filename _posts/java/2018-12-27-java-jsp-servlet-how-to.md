@@ -10,6 +10,7 @@ comments: true
 - JavaEE 설정
 - Window-Preperence 메뉴 클릭
 - Server-Runtime Environments 메뉴에서 톰캣버전 설정, 톰켓 폴더 설정
+- propertis-Project Facets-Runtimes에서 톰캣 체크.그러면 톰켓 lib가 추가됨 
 
 ### 인코딩 설정
 - Web-HTML Files - Encoding UTF-8
