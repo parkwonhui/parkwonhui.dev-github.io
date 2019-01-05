@@ -12,6 +12,11 @@ comments: true
 - Server-Runtime Environments 메뉴에서 톰캣버전 설정, 톰켓 폴더 설정
 - propertis-Project Facets-Runtimes에서 톰캣 체크.그러면 톰켓 lib가 추가됨 
 
+### 톰켓 라이브러리 추가
+- 프로젝트 선택 후 오른쪽 마우스 클릭-Properties
+- Project Facets-Runtimes
+- Apach Tomcat 체크하고 Apply
+
 ### 인코딩 설정
 - Web-HTML Files - Encoding UTF-8
 - Web-JSP Files - Encoding UTF-8
