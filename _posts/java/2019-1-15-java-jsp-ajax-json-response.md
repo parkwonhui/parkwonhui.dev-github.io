@@ -65,7 +65,7 @@ forward.setPath("/jsp/module/schedule/calenderListJsonParse.jsp");
 - ajax 요청 성공 시 json으로 데이터 변경은 안되는지 궁금
 
 ~~~
-if(false == JSONObject.isNull(data[i].category_id))
+if(false == data[i].isNull("category_id"))
    	console.log(data[i].category_id);
 ~~~
 
