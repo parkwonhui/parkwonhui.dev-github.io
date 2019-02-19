@@ -5,7 +5,6 @@ categories: [java]
 tags: [java,spring]
 comments: true
 ---
-
 # RestController 정리
 ### @RestController
 - Controller 어노테이션은 view를 반환다

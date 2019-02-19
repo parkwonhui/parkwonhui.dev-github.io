@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is myBlog
-
-java,html,css,javascript,jquery,ajax
+BackEnd 개발자를 목표로 공부하고 있습니다
+기술 스택
+java, Jsp, Spring, Oracle, HTML, CSS, Javascript, jquery, git
