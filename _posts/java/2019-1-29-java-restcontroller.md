@@ -59,20 +59,6 @@ public class Member {
 
 ### index.html
 - index.html 접속 시 client url로 이동한다
-~~~
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-<script type="text/javascript">
-location.href="client";
-</script>
-</head>
-<body>
-</body>
-</html>
-~~~
 
 ### JsonController.java
 - JsonController에서 client view를 전달한다. 매핑에 의해서 view/client.jsp 로 치환한다
