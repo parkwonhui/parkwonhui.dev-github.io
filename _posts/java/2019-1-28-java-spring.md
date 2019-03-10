@@ -32,6 +32,32 @@ comments: true
 - context:component-scan 함으로써 base-package에 있는 controller를 전부 생성한다
 - default-servlet-handler를 선언하면 @RequestMapping 어노테이션과 요청을 매칭시켜준다. 만약 mvc 선언이 되어있지 않다면 404 에러가 뜬다
 - InternalResourceViewResolver는 url의 위치와 타입, 우선순위를 정할 수 있다
+~~~
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc  http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+              http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+       <context:annotation-config/>
+       <context:component-scan base-package="kosta"/>
+       
+              
+       <mvc:annotation-driven/>
+       <mvc:default-servlet-handler/>
+       
+<!-- <bean id="JsonController" class="kosta.controller.JsonController"></bean> -->
+       <bean id="viewResolver"
+              class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+              <property name="prefix" value="/view/"/>
+              <property name="suffix" value=".jsp"/>
+              <property name="order" value="1"/>
+       </bean>
+       
+</beans>
+~~~
 
 ### web.xml
 - Dispatcher Servlet은 client의 요청을 받고 Handler Mapping, Controller,  ViewResolver,View 에 요청 및 응답을 받은 후 다시 client로 전달하는 역활을 한다. 아래와 같이 servlet-class 태그로 정의할 수 있다
@@ -83,20 +109,6 @@ comments: true
 ### index.html
 - index.html 호출 시 client라는 url 을 요청
 - @RequestMapping 에 /client 라는 매핑이 있다면 매핑되는 함수를 호출하고 없다면 404 에러가 뜬다
-~~~
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-<script type="text/javascript">
-location.href="client";
-</script>
-</head>
-<body>
-</body>
-</html>
-~~~
 
 ### Controller.java
 - @Controller 어노테이션을 붙이면 웹 요청을 처리하는 컨트롤러라는 의미
