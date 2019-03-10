@@ -16,6 +16,7 @@ comments: true
 - maven lib 는 https://mvnrepository.com/ 에서 검색
 - lib의 버전은 맞춰줘야 한다. 예를 들어 spring 버전이 4.3.3이면 같은 버전으로 맞춰주는것이 좋다
 - lib는 감싸는 build 태그 다음에 dependencies 태그를 추가한 후 그 안에서 lib 사용을 선언한다
+
 ~~~
   </build>
 <dependencies>
@@ -32,6 +33,7 @@ comments: true
 - context:component-scan 함으로써 base-package에 있는 controller를 전부 생성한다
 - default-servlet-handler를 선언하면 @RequestMapping 어노테이션과 요청을 매칭시켜준다. 만약 mvc 선언이 되어있지 않다면 404 에러가 뜬다
 - InternalResourceViewResolver는 url의 위치와 타입, 우선순위를 정할 수 있다
+
 ~~~
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
