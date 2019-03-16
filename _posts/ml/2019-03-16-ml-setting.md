@@ -5,6 +5,7 @@ categories: [ml]
 tags: [ml]
 comments: true
 ---
+
 # 아나콘다, 주피터 개발환경 구축
 
 ### 선형 회귀 인공지능 구현
@@ -63,6 +64,7 @@ jupyter notebook
 
 - 텐서플로우 예제 실행. No module named 'numpy.core._multiarray_umath' 에러 남.  원인은 python 3.6버전이라서 텐서플로우 버전을 1.12로 맞춰줘야 한다
 - 기존 텐서플로우 삭제 및 1.12.0 버전으로 실행하니 실행이 잘 되었다.
+
 ~~~
 python -m pip uninstall tensorflow
 python -m pip install tensorflow==1.12.0
