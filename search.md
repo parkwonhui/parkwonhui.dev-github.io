@@ -3,7 +3,7 @@
 layout: page
 
 title: search
-permalink: /about/
+permalink: /search/
 ---
 
 <div id="results">
