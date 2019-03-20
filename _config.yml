@@ -34,7 +34,7 @@ github_username: parkwonhui
 
 # Build settings
 markdown: kramdown
-theme: Indigo 
+theme: dirt 
 #minima
 plugins:
   - jekyll-feed
