@@ -34,7 +34,7 @@ github_username: parkwonhui
 
 # Build settings
 markdown: kramdown
-theme: dirt 
+theme: minimal-mistakes-jekyll 
 #minima
 plugins:
   - jekyll-feed
