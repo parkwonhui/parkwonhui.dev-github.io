@@ -34,9 +34,10 @@ github_username: parkwonhui
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
+  
+  
   
 
 # Exclude from processing.
