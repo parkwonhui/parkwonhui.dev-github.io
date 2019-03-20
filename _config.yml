@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Today I Learn
+title: StudyServer
 email: parkwonhui.dev@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+    web, server, java, spring 등.. 공부한 것을 기록하는 장소 입니다.
+    공부하면서 정리하였기 때문에 틀린 내용이 있을 수 있습니다.
+    이야기 해주시면 수정하겠습니다.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: ""
 github_username: parkwonhui
 
 # Jekyll config
@@ -29,9 +29,9 @@ github_username: parkwonhui
 #    jekyll-coffeescript
 theme: minima
 
-#plugins: jekyll-paginate   
-#paginate: 5
-#paginate_path: "/blog/page:num"
+plugins: jekyll-paginate   
+paginate: 10
+paginate_path: "/blog/page:num"
 
 # Build settings
 markdown: kramdown
