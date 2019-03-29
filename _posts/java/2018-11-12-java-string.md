@@ -122,6 +122,13 @@ if(true == fileName1.endsWith("jpg")){
     }
 }
 ~~~
+- 문자열 치환 replace(찾을문자열, 바꿀문자열)
+
+~~~
+String str = "가,나,다,라,마";
+String result = str.replace(",", " ");
+System.out.println("result:"+result);
+~~~
 
 - 그 외  getBytes ( 네트워크로 전달할 때 바이트로 변환),toCharArray()(Char형으로 변환) 등의 String 함수가 있다
 
