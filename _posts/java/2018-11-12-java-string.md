@@ -20,6 +20,7 @@ String str = new String("ABC");
 String 불변성
 - 문자열은 불변하기 때문에 문자열 변경 시 새로운 문자열을 다시 생성함=>비효율적
 - 문자열 붙이기
+
 ~~~
 String str3 = str.concat("DEF");
 ~~~
@@ -75,6 +76,7 @@ System.out.println("pattern:"+pattern);
 
 - 공백 제거 trim
 - 같은 글자인지 체크 equals
+
 ~~~
 String id = "kosta";
 String m_id = "kosta ";    // 띄어쓰기가 있는 경우  trim함수로 공백제거를 할 수 있다
@@ -121,8 +123,7 @@ if(true == fileName1.endsWith("jpg")){
 }
 ~~~
 
-그 외  getBytes ( 네트워크로 전달할 때 바이트로 변환),<br>
-toCharArray()(Char형으로 변환) 등의 String 함수가 있다<br>
+- 그 외  getBytes ( 네트워크로 전달할 때 바이트로 변환),toCharArray()(Char형으로 변환) 등의 String 함수가 있다
 
 
 <div id="disqus_thread"></div>
