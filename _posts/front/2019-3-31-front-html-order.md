@@ -14,12 +14,7 @@ comments: true
 - 아래 예제를 실행하면 콘솔창에 head, body, 아래 스크립트, onLoad 순으로 출력되는 것을 확인할 수 있다
 
 ~~~
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+
 <script>
 console.log('head');
 </script>
@@ -37,7 +32,6 @@ console.log('onLoad');
 console.log('아래 스크립트');
 </script>
 
-</html>
 ~~~
 
 ### CSS, JavaScript 위치
