@@ -10,7 +10,7 @@ comments: true
 - 자바 8에서 람다와 함께 추가됨
 - Collection을 for, foreach로 다루면 코드가 복잡해지므로 사용
 - 함수형 프로그래밍(동작하는 코드를 간단하체 처리. 상태관리x)
-- 병렬처리 가능
+- 병렬처리 가능(그러나 ThreadPool을 사용하여 성능저하를 일으킬 수 있음)
 
 ### 예제
 - reduece 함수를 이용하여 list에 있는 모든 값을 더하고 첫번째 인자인 1을 더해준다,
@@ -100,9 +100,30 @@ public class Test{
 }
 ~~~
 
-계속 정리중
+### Stream distinct 함수
+- 요소의 중복값을 제거하는 함수
 
+~~~
+public class Test {
+	public static void main(String[] args) {
+		List<String> fruit = Arrays.asList("사과", "오렌지", "배", "배", "오렌지");
+		fruit.stream().distinct().forEach(System.out::println);
+	}
+}
+~~~
 
+### Stream sorted 함수
+- 정렬을 하는 함수. 인자 없이 그냥 호출하면 오름차순이고 Comparator.reverseOrder()함수를 호출하면 내림차순이다.
+
+~~~
+public class Test {
+	public static void main(String[] args) {
+		List<Integer> fruit = Arrays.asList(40, 100, -20, 4, 10);
+		fruit.stream().sorted().forEach(System.out::println);
+		fruit.stream().sorted(Comparator.reverseOrder() ).forEach(System.out::println);
+	}
+}
+~~~
 
 <div id="disqus_thread"></div>
 <script>
