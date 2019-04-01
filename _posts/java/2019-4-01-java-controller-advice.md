@@ -11,6 +11,8 @@ comments: true
 - 예외 상황은 @ExceptionHandler와 @ControllerAdvice를 사용해서 처리할 수 있다(다른 방법으로 @ResponseEntity를 사용할 수 있다)
 - AOP를 이용하는 방식(공통사항은 따로 분리하는 방식)
 - 기존 방식으로 예외를 처리하면 예외 처리가 있을 때 마다 중복작성된다. 하지만 AOP 개념을 도입하면 한곳에서만 처리하면 된다.(if문으로 체크하지 않고 예외를 발생시키는 이유)
+- 체계적으로 로직검사를 하여 유지보수가 쉬워진다
+- @Valid를 사용하여 Setter 호출 시 형식체크를 해서 값을 넣지 않을 수도 있다)
 
 ### 설정
 - CommonExceptionAdvice java 파일 생성
