@@ -1,7 +1,7 @@
 ---
 layout: post
 title: java spring5 프로젝트 설정
-categories: [java]
+categories: [spring]
 tags: [java,spring]
 comments: true
 ---

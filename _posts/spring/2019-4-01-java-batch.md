@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Batch
-categories: [java]
+categories: [spring]
 tags: [java,batch]
 comments: true
 ---

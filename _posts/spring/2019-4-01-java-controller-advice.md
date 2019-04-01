@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ControllerAdvice
-categories: [java]
+categories: [spring]
 tags: [java,controllerAdvice]
 comments: true
 ---

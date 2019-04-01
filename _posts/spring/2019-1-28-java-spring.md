@@ -1,7 +1,7 @@
 ---
 layout: post
 title: spring 세팅 및 기본설정
-categories: [java]
+categories: [spring]
 tags: [java,spring]
 comments: true
 ---

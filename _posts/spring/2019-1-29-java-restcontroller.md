@@ -1,7 +1,7 @@
 ---
 layout: post
 title: restController
-categories: [java]
+categories: [spring]
 tags: [java,spring]
 comments: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: file upload
-categories: [java]
+categories: [spring]
 tags: [java,spring]
 comments: true
 ---
