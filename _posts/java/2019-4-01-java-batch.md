@@ -39,7 +39,7 @@ public class Test {
               try {
                      
                      Class.forName("oracle.jdbc.OracleDriver");
-                     conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "kosta192",  "1234");
+                     conn =  DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "id",  "pass");
                      conn.setAutoCommit(false);
                      ps = conn.prepareStatement(sql.toString());
                      
