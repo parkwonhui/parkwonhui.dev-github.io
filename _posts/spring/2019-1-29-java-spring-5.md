@@ -99,6 +99,7 @@ public class Restaurant {
 ### 커넥션 풀 설정
 - jdbc는 원래 톰캣 lib에 있었기 때문에 lib를 가져온다
 - 히카리 lib 가져와야함
+
 ~~~
 <!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
 <dependency>
@@ -128,7 +129,6 @@ public class Restaurant {
 <version>${org.springframework-version}</version>
 </dependency>
 ~~~
-
 - db 접속
 
 ~~~
