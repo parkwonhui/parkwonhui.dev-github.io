@@ -64,6 +64,7 @@ comments: true
 ### web.xml
 - Dispatcher Servlet은 client의 요청을 받고 Handler Mapping, Controller,  ViewResolver,View 에 요청 및 응답을 받은 후 다시 client로 전달하는 역활을 한다. 아래와 같이 servlet-class 태그로 정의할 수 있다
 - url 패턴을 정의할 수 있다. 아래 예제에서는 '/'로 오는 모든 요청을 처리한다
+
 ~~~
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://xmlns.jcp.org/xml/ns/javaee"  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee  http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
