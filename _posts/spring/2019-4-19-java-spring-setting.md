@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 최소한의 Spring 기본 설정 
+title: Spring 기본설정(pom.xml, web.xml, encoding)
 categories: [spring]
 tags: [java,spring]
 comments: true
