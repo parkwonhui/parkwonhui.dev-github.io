@@ -20,6 +20,8 @@ comments: true
            <org.slf4j-version>1.6.6</org.slf4j-version>
 </properties>
 ~~~
+
+### pom.xml 설정
 - Java Version 변경
 - 스프링 5.x 버전을 사용할 때 JDK 1.8을 사용하는 것이 가장 좋다
 - maven-compiler-plugin 내용을 1.6에서 1.8로 수정(version도 바꿨다)
@@ -36,8 +38,35 @@ comments: true
                     <showDeprecation>true</showDeprecation>
 </configuration>
 ~~~
+- lombok 설정
+- [lombok 공식 사이트](https://projectlombok.org/)
+- lombok 공식 사이트에서 lombok 다운로드하여 설치한 후 pom.xml에 설정 추가
 
+~~~
+<!-- lombok -->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-test</artifactId>
+	<version>${org.springframework-version}</version>
+</dependency>
+<dependency>
+	<groupId>org.projectlombok</groupId>
+	<artifactId>lombok</artifactId>
+	<version>1.18.0</version>
+	<scope>provided</scope>
+</dependency>
+~~~
+- junit 설정 추가
 
+~~~
+<dependency>
+	<groupId>junit</groupId>
+	<artifactId>junit</artifactId>
+	<version>4.12</version>
+	<scope>test</scope>
+</dependency>
+~~~
+		   
 ### 한글 설정
 - web.xml에 한글 인코딩을 하도록 utf-8 filter를 설정한다
 
