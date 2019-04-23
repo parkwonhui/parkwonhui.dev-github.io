@@ -155,6 +155,21 @@ comments: true
 - text-align:-webkit-center
 - webkit 이란 크롬, 사파리 브라우저에 적용, -moz는 파이어폴스, -ms는 익스플로러를 뜻함
 
+### 어썸 폰트
+- 어썸폰트란 부트스트랩의 text 아이콘을 뜻한다. text이므로 이미지보다 가공하기 쉽고 깨지지 않는다
+- [어썸폰트 공식 홈페이지](https://fontawesome.com/?from=io)
+- 아래 style 추가
+~~~
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+~~~
+- 사용방법
+- fa-spin은 아이콘을 돌린다
+- fa-fw는 공백 포함 넓이는 고정하여 깔끔해보이도록 함
+- fa-3x는 크기 변경
+~~~
+<i class="far fa-grin-squint fa-spin fa-fw"></i>
+~~~
+
 /**
 *  RECOMMENDED CONFIGURATION VARIA*BLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
