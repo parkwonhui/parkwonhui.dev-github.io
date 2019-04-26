@@ -18,6 +18,7 @@ comments: true
 
 #### 회원 정보 아이콘 추가
 - bootstrap awesome font 'fa-user' icon을 추가한다
+
 ~~~
 <c:when test="${not empty userVO.id}">
     ${userVO.name} 님 환영합니다
@@ -37,6 +38,7 @@ comments: true
 
 #### DB 수정
 - 유저 삭제 flag 추가
+
 ~~~
 alter table user add USER_DEL boolean DEFAULT '0';
 ~~~
@@ -49,11 +51,12 @@ private boolean userDel;        // userVO에 추가
 ~~~
 - xml 수정
 - 유저 정보나 게시판 정보를 수정하는 부분에 Del정보 추가
-
 - 게시판 삭제 수정
+
 ### 게시판 삭제 flag 추가
 
 - board 테이블에 삭제 플래그 추가
+
 ~~~
 alter table board add BOARD_DEL boolean DEFAULT '0';
 ~~~
