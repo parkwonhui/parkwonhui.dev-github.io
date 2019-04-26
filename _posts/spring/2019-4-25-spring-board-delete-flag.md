@@ -9,12 +9,11 @@ comments: true
 ### 회원 탈퇴
 - 회원 탈퇴 기능을 만들면 탈퇴한 회원여부를 flag로 기록해야한다
 - 데이터 보존을 위한 용도
-	- 회원탈퇴 추가
-	- 탈퇴한 회원 게시물 플래그 수정
-	- 탈퇴한 회원 id로 검색안되도록 수정
-	- 회원가입 시 탈퇴한 회원과 같은 id라면 
-	- 로그인 시 탈퇴한 회원이 아닌 회원의 비밀번호 체크
-	- 회원탈퇴 시 게시물도 접근할 수 없도록 만든다. 그러므로 게시물도 삭제 flag가 필요하다
+	- 회원탈퇴 기능 추가
+	- 게시판 : 탈퇴한 회원 게시물 플래그 수정
+	- 검색 : 탈퇴한 회원 id로 검색안되도록 수정
+	- 회원가입 : 회원가입 시 탈퇴한 회원과 같은 id라도 회원가입 되도록
+	- 로그인 : 탈퇴한 회원 로그인 안되도록 수정
 
 #### 회원 정보 아이콘 추가
 - bootstrap awesome font 'fa-user' icon을 추가한다
@@ -35,6 +34,7 @@ comments: true
 |----|----|-----|
 |/user/info| 유저가 존재하는지 체크 |POST |
 |/user/info| 유저 정보 페이지로 이동 | GET |
+|/user/leave| 회원 탈퇴 | GET |
 
 #### DB 수정
 - 유저 삭제 flag 추가
@@ -50,8 +50,48 @@ alter table user add USER_DEL boolean DEFAULT '0';
 private boolean userDel;        // userVO에 추가
 ~~~
 - xml 수정
-- 유저 정보나 게시판 정보를 수정하는 부분에 Del정보 추가
-- 게시판 삭제 수정
+- 유저 정보를 가져올 때 user_del 을 체크한다
+- 유저 탈퇴 플래그를 수정하는 쿼리를 만든다
+
+~~~
+<select id="getUserVO" parameterType="String"  resultType="UserVO">
+     SELECT   user_seq as userSeq
+              , id
+              , password
+              , name
+              , user_del as userDel
+     FROM user
+     WHERE  id = #{id}
+     AND    user_del != 1
+</select>
+
+<update id="updateUserDelFlag" parameterType="Long">
+     UPDATE          user
+     SET             user_del = 1
+     WHERE      user_seq = #{userSeq}
+</update>  
+~~~
+### 회원 탈퇴 처리
+- 회원 탈퇴 시 플래그를 수정하고 session 에서 삭제한다
+
+~~~
+@Override
+public ResultMap updateUserDelFlag(final Long userSeq, HttpSession session) throws Exception {
+    int result = dao.updateUserDelFlag(userSeq);
+    if(0 == result) {
+        log.info("알 수 없는 에러!!!!");
+        throw new LogicException("609", "알 수 없는 에러로 회원탈퇴에 실패했습니다");    
+    }
+    
+    session.invalidate();
+    
+    ResultMap resultMap = new ResultMap();
+    resultMap.setStatus("200");
+    resultMap.setMsg("");    
+    
+    return resultMap;
+}
+~~~
 
 ### 게시판 삭제 flag 추가
 
