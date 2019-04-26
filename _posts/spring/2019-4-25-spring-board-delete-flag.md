@@ -37,6 +37,7 @@ comments: true
 
 ##### DB 수정
 - 유저 삭제 flag 추가
+
 ~~~
 alter table user add USER_DEL boolean DEFAULT '0';
 ~~~
