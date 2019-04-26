@@ -16,6 +16,7 @@ comments: true
 
 ##### 회원 정보 아이콘 추가
 - bootstrap awesome font 'fa-user' icon을 추가한다
+
 ~~~
 <c:when test="${not empty userVO.id}">
     ${userVO.name} 님 환영합니다
@@ -92,6 +93,7 @@ public ResultMap updateUserDelFlag(final Long userSeq, HttpSession session) thro
 ### 게시판 삭제 flag 추가
 
 - board 테이블에 삭제 플래그 추가
+
 ~~~
 alter table board add BOARD_DEL boolean DEFAULT '0';
 ~~~
@@ -147,6 +149,7 @@ private boolean boardDel;    // boardVO에 추가
 ~~~
 
 - dao 를 추가하고 삭제 dao 대신 updateBoardDelFlag 쿼리를 실행하도록 만든다
+
 ~~~
      public int updateBoardDelFlag(Long boardSeq) {
            return update("board.updateBoardDelFlag", boardSeq);
