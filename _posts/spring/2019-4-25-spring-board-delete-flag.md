@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring 회원탈퇴 및 게시판 삭제 플래그 추가
+title: 게시판 만들기-회원탈퇴 및 게시판 삭제 플래그 추가
 categories: [spring]
 tags: [java,spring,board]
 comments: true
