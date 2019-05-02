@@ -97,6 +97,7 @@ VALUES(12, 1, 1, 1, 1);
 | url | 설명 | Method |
 |---------|-----------|-------|
 | /admin/product/list | 상품 리스트 보기  | GET |
+| /admin/product/{seq} | 상품이 있는지 체크  | POST |
 | /admin/product/{seq} | 상품 상세 보기  | GET |
 | /admin/product/post | 작성할 수 있는 권한이 있는지 체크 | POST |
 | /admin/product/post | 새로운 상품 등록 페이지 이동 | GET |
@@ -109,6 +110,7 @@ VALUES(12, 1, 1, 1, 1);
 | url | 설명 | Method |
 |---------|-----------|-------|
 | /admin/user/list | 고객 조회  | GET |
+| /admin/user/{seq} | 고객이 있는지 체크 | POST |
 | /admin/user/{seq} | 고객 상세 보기 | GET |
 | /admin/user/post | 고객 추가 체크 | POST |
 | /admin/user/post | 고객 추가 이동 | GET |
@@ -193,8 +195,6 @@ alter table product change pic img varchar(50)
 ~~~
 
 - 메뉴에서 관리자 상품관리 페이지로 이동되도록 수정(관리자 상품관리, 상세페이지, 추가, 수정 페이지를 만든다)
-
-
 
 <div id="disqus_thread"></div>
 <script>
