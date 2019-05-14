@@ -66,6 +66,126 @@ public class mysqlDBTest {
 }
 ~~~
 
+### MyBatis
+- SqlSessionFactory는 DataSource를 참고하여 db와 mybatis를 연결시킴
+- JDBC에서는 DB에 접근할 때마다 Session을 가져와서 사용했지만 Spring에서는 bean에 올려두고 mapper를 이용해서 접근
+- @Mapper, @Service 어노테이션을 이용하면 스프링 빈으로 주입받아 사용 가능[설명](http://wiki.sys4u.co.kr/pages/viewpage.action?pageId=7767258)
+- 아래는 접속을 확인하기 위해서 유닛테스트를 하기 위해 Connection 직접 호출
+- RootConfig.java
+
+~~~
+import javax.sql.DataSource;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+@Configuration
+@ComponentScan(basePackages= {"base.toy.vo"})
+public class RootConfig {
+	
+	@Bean
+	public DataSource dataSource(){
+		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
+		dataSource.setUrl("jdbc:mariadb://localhost:3310/test");
+		dataSource.setUsername("test");
+		dataSource.setPassword("1234");
+		
+		return dataSource;
+	}
+	
+	  @Bean
+	  public SqlSessionFactory sqlSessionFactory() throws Exception {
+	    SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
+	    sqlSessionFactory.setDataSource(dataSource());
+	    return (SqlSessionFactory) sqlSessionFactory.getObject();
+	  }
+
+}
+~~~
+
+- test.java
+
+~~~
+package base.toy.project;
+
+import static org.junit.Assert.*;
+
+import java.sql.Connection;
+
+import javax.sql.DataSource;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import base.toy.config.RootConfig;
+import lombok.Setter;
+import lombok.extern.log4j.Log4j;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {RootConfig.class})
+@Log4j
+public class test {
+
+	  @Setter(onMethod_ = { @Autowired })
+	  private SqlSessionFactory sqlSessionFactory;
+
+	  @Test
+	  public void testMyBatis() {
+
+	    try (SqlSession session = sqlSessionFactory.openSession();
+	       Connection con = session.getConnection();) {
+	      log.info(con);
+	      
+
+	    } catch (Exception e) {
+	    	log.info("실패"+e.getMessage());
+	      fail(e.getMessage());
+	    }
+
+	  }
+}
+~~~
+
+### 커넥션 풀
+- 여러명의 사용자를 동시에 처리해야하므로 커넥션 풀을 사용해 미리 접속을 만들어두는 것이 좋다.
+- HikariCP 사용
+- pom.xml
+
+~~~
+<dependency>
+	<groupId>com.zaxxer</groupId>
+	<artifactId>HikariCP</artifactId>
+	<version>2.7.4</version>
+</dependency>
+~~~
+
+- DataSource가 HikariConfig를 사용하는 것으로 변경
+- SqlSession Connect 시 성공
+
+~~~
+@Bean
+public DataSource dataSource(){
+	  HikariConfig hikariConfig = new HikariConfig();
+	  hikariConfig.setDriverClassName("org.mariadb.jdbc.Driver");
+	  hikariConfig.setJdbcUrl("jdbc:mariadb://localhost:3310/test");
+	  hikariConfig.setUsername("test");
+	  hikariConfig.setPassword("1234");
+	
+	  HikariDataSource dataSource = new HikariDataSource(hikariConfig);
+	return dataSource;
+}
+~~~
+
 
 <div id="disqus_thread"></div>
 <script>
