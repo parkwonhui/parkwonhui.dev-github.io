@@ -34,8 +34,7 @@ comments: true
 
 ### JDBC 연결
 - JDBC는 어떤 DB 드라이버든 동일한 코드로 제어할 수 있다.
-- myBatis에 비해 같은 코드 반복이 많고 복잡하다. 
-- 쿼리 실행 시 DB를 연결하고 닫아줘야 한다
+- myBatis에 비해 같은 코드 반복이 많고 복잡하다(select 직접 처리) 직접 연결을 열고 닫아줘야 한다
 - 많은 사용자들이 db에 원활하게 접속할 수 있게 db 커넥션풀을 미리 만들어놔야 한다.
 - getConnection("jdbc:mariadb://접속ip:포트번호/데이터베이스이름", id, 비밀번호)
 - 아래 코드가 실패하면 비밀번호, db 존재 확인 그 외 1.권한 확인  2. 포트번호 확인 2. 방화벽 확인(ping test)
@@ -70,6 +69,7 @@ public class mysqlDBTest {
 - SqlSessionFactory는 DataSource를 참고하여 db와 mybatis를 연결시킴
 - JDBC에서는 DB에 접근할 때마다 Session을 가져와서 사용했지만 Spring에서는 bean에 올려두고 mapper를 이용해서 접근
 - @Mapper, @Service 어노테이션을 이용하면 스프링 빈으로 주입받아 사용 가능[설명](http://wiki.sys4u.co.kr/pages/viewpage.action?pageId=7767258)
+- 자동으로 연결과 종료를 수행한다
 - 아래는 접속을 확인하기 위해서 유닛테스트를 하기 위해 Connection 직접 호출
 - RootConfig.java
 
