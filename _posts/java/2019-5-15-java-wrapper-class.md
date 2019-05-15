@@ -11,6 +11,7 @@ comments: true
 - long은 순수한 자바 자료형이다. 크기는 8byte
 - Long.SIZE 에 대한 설명 The number of bits used to represent a long value in two's complement binary form.
 - Wrapper Class는 클래스로써 변환해야할 때, 인자값으로 Class를 받을 때 등.. 의 상황에서 사용한다.
+- 예를들어 클라로부터 a라는 인자를 받을 때도 있고, 받지 않을 때도 있다. 이 때 a의 값이 없을 때는 null이 대입되므로 Wrapper Class를 사용해야한다.
 
 ~~~
 int LongSize = Long.SIZE;
