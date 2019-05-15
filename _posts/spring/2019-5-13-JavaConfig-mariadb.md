@@ -70,6 +70,36 @@ public class mysqlDBTest {
 - JDBC에서는 DB에 접근할 때마다 Session을 가져와서 사용했지만 Spring에서는 bean에 올려두고 mapper를 이용해서 접근
 - @Mapper, @Service 어노테이션을 이용하면 스프링 빈으로 주입받아 사용 가능[설명](http://wiki.sys4u.co.kr/pages/viewpage.action?pageId=7767258)
 - 자동으로 연결과 종료를 수행한다
+
+- pom.xml
+~~~
+<dependency>
+	<groupId>org.mybatis</groupId>
+	<artifactId>mybatis</artifactId>
+	<version>3.4.6</version>
+</dependency>
+
+<dependency>
+	<groupId>org.mybatis</groupId>
+	<artifactId>mybatis-spring</artifactId>
+	<version>1.3.2</version>
+</dependency>
+
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-tx</artifactId>
+	<version>${org.springframework-version}</version>
+</dependency>
+
+<!-- ${org.springframework-version} 하면 에러나서 버전 수정 -->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-jdbc</artifactId>
+	<version>3.0.3.RELEASE</version>
+</dependency>
+
+~~~
+
 - 아래는 접속을 확인하기 위해서 유닛테스트를 하기 위해 Connection 직접 호출
 - RootConfig.java
 
