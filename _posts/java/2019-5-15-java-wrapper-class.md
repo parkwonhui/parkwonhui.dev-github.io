@@ -22,6 +22,9 @@ System.out.println("longSize:"+LongSize);
 - Long의 값이 null일 때 long에 Long값을 대입하면 형변환이 되지 않아 에러 발생
 - Long과 long을 혼용해서 사용하고 있었다.. 주의할 것;;
 
+### 궁금한 것
+- 받는 값이 long 일 때 null을 long으로 변환하지 못해서 형변환 에러가 나서 예외처리가 된다. 이 때 형변환 에러 처리를 하므로 그대로 두는지, WrapperClass로 받은 후 null체크를 한 다음 처리하는지?
+- WrapperClass를 사용한다. 컨트롤 밖보다 안에서 처리를 하도록 한다.
 
 <div id="disqus_thread"></div>
 <script>
