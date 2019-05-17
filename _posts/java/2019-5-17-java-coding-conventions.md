@@ -20,10 +20,12 @@ comments: true
 - }else 를 } else 로 수정
 - for(  를 for ( 로 수정
 - }( 을 ) { 로 수정
+- + 검색해서 안띄워져 있으면 띄위기(xml 에도 적용할 것)
+- true, false 는 true는 없애고 false는 ! 로 수정
 - private인데 public으로 접근제어자 사용하지 않았는지 체크!
 - naming 알맞게 짓기
+- 자료형에 기반한 네이밍을 하지 않는다. 예를들어 List<String> userList 였다가 Map 으로 바뀌면 userMap으로 네이밍을 다시 해줘야한다
 - 불필요한 코드나 java대신 xml로 간단하게 처리할 수 있는지 확인하기
-
 
 <div id="disqus_thread"></div>
 <script>
