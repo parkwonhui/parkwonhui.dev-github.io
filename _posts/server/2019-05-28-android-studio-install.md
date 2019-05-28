@@ -30,6 +30,7 @@ comments: true
 - File - Settings - Editor - General - Auto Import
 - Add unambiguous imports on the fly 체크
 - Optimize imports on the floy (for current project) 체크
+- Layout view에서 눈모양 아이콘을 클릭한 뒤 Show Layout Decorations 클릭.(앱 아이콘이 보여서 위치가 좀 더 정확해짐)
 
 ### 실행
 - Shift + F10 을 누르면 안드로이드 폰 화면이 생긴다
